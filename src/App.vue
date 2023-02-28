@@ -1,9 +1,11 @@
 <script>
 import MainHeader from './components/MainHeader.vue'
+import HeroSection from './components/HeroSection.vue'
 import HomeImage from '@/assets/images/home-image.jpg'
 export default {
   components: {
-    MainHeader
+    MainHeader,
+    HeroSection
   },
   data: () => ({
     HomeImage
@@ -17,6 +19,7 @@ export default {
   </div>
   <div class="main-container">
     <MainHeader />
+    <HeroSection />
   </div>
 </template>
 
@@ -41,6 +44,8 @@ body {
   align-items: center;
   flex-flow: column nowrap;
   /* align-items: center; */
+  max-width: 800px;
+  margin: auto;
   width: 100vw;
   /* height: 100vh; */
 }

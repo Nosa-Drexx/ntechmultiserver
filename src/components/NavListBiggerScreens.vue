@@ -72,7 +72,7 @@ export default {
 }
 
 .list:first-child a {
-  color: var(--green);
+  color: var(--lemonGreen);
   border-color: var(--lightGray);
 }
 

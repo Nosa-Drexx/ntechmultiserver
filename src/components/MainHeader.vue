@@ -108,7 +108,7 @@ header .contact {
 }
 .address div span {
   font-size: 1.5rem;
-  color: var(--black);
+  color: var(--white);
 }
 .address div {
   display: flex;
@@ -137,6 +137,9 @@ header .contact {
     width: 100%;
     height: 150px;
     margin: auto;
+  }
+  .address {
+    gap: 1rem;
   }
 }
 </style>
