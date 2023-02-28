@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <section :class="$style.reference">
+  <section :class="$style.reference" id="testimonies">
     <span class="fa-solid fa-quote-left" :class="$style['quote-icon']"></span>
     <div :class="$style.quotes">
       <blockquote :class="$style.quote">

@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <section :class="$style['about-us']">
+  <section :class="$style['about-us']" id="about">
     <h1 :class="$style.h1">About Us</h1>
     <div :class="$style.about">
       <div :class="$style.text">
