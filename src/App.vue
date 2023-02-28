@@ -3,13 +3,15 @@ import MainHeader from './components/MainHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import AboutSection from './components/AboutSection.vue'
+import ReferenceSection from './components/ReferenceSection.vue'
 import HomeImage from '@/assets/images/home-image.jpg'
 export default {
   components: {
     MainHeader,
     HeroSection,
     ServicesSection,
-    AboutSection
+    AboutSection,
+    ReferenceSection
   },
   data: () => ({
     HomeImage
@@ -26,6 +28,7 @@ export default {
     <HeroSection />
     <ServicesSection />
     <AboutSection />
+    <ReferenceSection />
   </div>
 </template>
 
@@ -50,7 +53,7 @@ body {
   align-items: center;
   flex-flow: column nowrap;
   /* align-items: center; */
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: auto;
   width: 100vw;
   /* height: 100vh; */
