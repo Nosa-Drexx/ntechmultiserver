@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <section :class="$style.hero" id="hero">
+  <section :class="$style.hero" id="Home">
     <div :class="$style['hero-text']">
       <h1 :class="$style['hero-h1']">Welcome to the right place that boost your business</h1>
       <p :class="$style['hero-p']">

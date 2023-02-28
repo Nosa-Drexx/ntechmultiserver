@@ -68,7 +68,12 @@ export default {
     color: var(--white);
     text-decoration: none;
     font-family: sans-serif;
+    transition: border 0.5s;
   }
+}
+
+.list a:hover {
+  border: 5px solid var(--lightGray);
 }
 
 .list:first-child a {
