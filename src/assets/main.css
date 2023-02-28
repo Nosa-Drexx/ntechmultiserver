@@ -1,3 +1,13 @@
+:root{
+  --green: rgb(57, 206, 12);
+  --gray: rgb(41, 40, 40);
+  --white: white;
+  --black: black;
+  --lightYellow: rgb(211, 211, 25);
+  --lightGray: rgb(146, 141, 141);
+  --red: red;
+}
+
 /* @import './base.css';
 
 #app {

@@ -1,16 +1,32 @@
 <script>
 import ntechLogo from '@/assets/images/ntechmultiverse-logo.png'
+import NavList from './NavList.vue'
+import NavListBiggerScreens from './NavListBiggerScreens.vue'
+
 export default {
+  components: {
+    NavList,
+    NavListBiggerScreens
+  },
   data: () => ({
-    ntechLogo
-  })
+    ntechLogo,
+    showNavList: false
+  }),
+  methods: {
+    toggleShowNavList() {
+      this.showNavList = !this.showNavList
+    },
+    closeShowNavList(close) {
+      this.showNavList = close
+    }
+  }
 }
 </script>
 
 <template>
   <header>
     <div :class="$style.img">
-      <span class="fa-solid fa-bars"></span>
+      <button @click="toggleShowNavList"><span class="fa-solid fa-bars"></span></button>
       <img :class="$style['ntech-logo']" :src="ntechLogo" alt="ntech-logo" />
     </div>
     <div :class="$style.contact">
@@ -30,6 +46,8 @@ export default {
       </div>
     </div>
   </header>
+  <NavList v-if="showNavList" @closeNav="closeShowNavList" />
+  <NavListBiggerScreens />
 </template>
 
 <style module>
@@ -48,6 +66,23 @@ header .img {
   width: 100%;
   font-size: 1.5rem;
 }
+header .img button span {
+  font-size: 1.5rem;
+}
+
+.img button {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  height: 10px;
+  width: 10px;
+  border: none;
+  background: transparent;
+}
+
+.img span {
+  color: var(--green);
+}
 
 header .ntech-logo {
   object-fit: contain;
@@ -60,9 +95,11 @@ header .contact {
 }
 .contact p {
   font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--white);
 }
 .address {
-  color: rgb(211, 211, 25);
+  color: var(--lightYellow);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -71,10 +108,35 @@ header .contact {
 }
 .address div span {
   font-size: 1.5rem;
-  color: black;
+  color: var(--black);
 }
 .address div {
   display: flex;
   flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+/* Bigger Screens */
+@media (min-width: 800px) {
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 1.5rem 0rem;
+  }
+  header .img {
+    width: 40%;
+  }
+
+  .img button {
+    display: none;
+  }
+
+  header .ntech-logo {
+    object-fit: contain;
+    width: 100%;
+    height: 150px;
+    margin: auto;
+  }
 }
 </style>
