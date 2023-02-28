@@ -2,12 +2,14 @@
 import MainHeader from './components/MainHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import ServicesSection from './components/ServicesSection.vue'
+import AboutSection from './components/AboutSection.vue'
 import HomeImage from '@/assets/images/home-image.jpg'
 export default {
   components: {
     MainHeader,
     HeroSection,
-    ServicesSection
+    ServicesSection,
+    AboutSection
   },
   data: () => ({
     HomeImage
@@ -23,6 +25,7 @@ export default {
     <MainHeader />
     <HeroSection />
     <ServicesSection />
+    <AboutSection />
   </div>
 </template>
 
